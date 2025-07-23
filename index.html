@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP USER - Invoice & Vendor Financing</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-Xbg45MqvDIk1e563NLpGEulpX6AvL404DP+/iCgW9eFa2BqztiwTexswJo2jLMue" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1 class="main-title"> AvaLoans - Reliable Partner in Supply Chain Financing </h1>
+            <h1 class="main-title">CAPITaiL Loans - Reliable Partner in Supply Chain Financing</h1>
             <p class="welcome-message">Welcome to Invoice & Vendor Financing System</p>
-            <p class="sub-message">We empower businesses to unlock liquidity and strengthen relationships across the supply chain.
-By bridging the gap between payables and receivables, we create financial flexibility for buyers and suppliers alike.
-Our platform transforms working capital into a strategic growth lever for the entire value chain.
-Manage your AP & AR Financing efficiently with AvaLoans </p>
+            <p class="sub-message">"Enhance your cash flow efficiency with seamless AR and AP financing—automate
+                receivables collection and unlock early payment benefits on payables, all within your ERP system"</p>
         </div>
-
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="Financing-1024x512.webp" class="d-block w-100 " style="height: 430px;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="vendor-handshake.webp" class="d-block w-100" style="height: 430px;" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="what-is-ERP.jpg" class="d-block w-100" style="height: 430px;" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <!-- Main Form Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                        <polyline points="14,2 14,8 20,8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10,9 9,9 8,9"/>
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                        <polyline points="14,2 14,8 20,8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10,9 9,9 8,9" />
                     </svg>
-                    Invoice Upload
+                    Invoice Upload System
                 </div>
             </div>
             <div class="card-content">
@@ -49,10 +74,11 @@ Manage your AP & AR Financing efficiently with AvaLoans </p>
                     <div class="upload-area" id="uploadArea">
                         <input type="file" id="fileUpload" accept=".xlsx,.xls,.csv" style="display: none;">
                         <div class="upload-content">
-                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="17,8 12,3 7,8"/>
-                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17,8 12,3 7,8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
                             </svg>
                             <p class="upload-text">Click to upload Excel (.xlsx, .xls) or CSV files only</p>
                             <p id="fileName" class="file-name" style="display: none;"></p>
@@ -64,8 +90,10 @@ Manage your AP & AR Financing efficiently with AvaLoans </p>
                 <button id="submitBtn" class="submit-btn" disabled>
                     <span id="submitText">Upload to System</span>
                 </button>
-                <button  class="submit-btn" style="background-color: hsl(27, 100%, 56%); " >
-                    <a href="https://shivshiv12345.github.io/erpAnalysisDashboard/" style="font-style: oblique; color: white; text-decoration: none; ">Switch To Anlysis DashBoard</a>
+                <button class="submit-btn" style="background-color: rgb(252, 111, 3); ">
+                    <a href="https://shivshiv12345.github.io/erpAnalysisDashboard/"
+                        style="font-style: oblique; color: white; text-decoration: none; ">Switch To Anlysis
+                        DashBoard</a>
                 </button>
             </div>
         </div>
@@ -108,28 +136,18 @@ Manage your AP & AR Financing efficiently with AvaLoans </p>
             </div>
         </div>
 
-        <!-- Configuration Notice -->
-        <!-- <div class="notice-card">
-            <div class="notice-content">
-                <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="12" y1="8" x2="12" y2="12"/>
-                    <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-                <div>
-                    <h4 class="notice-title">Airtable Configuration Required</h4>
-                    <p class="notice-text">
-                        To use this system, you need to configure your Airtable credentials in the script.js file. 
-                        Check lines 2-8 in script.js to add your PAT, Base ID, and Table Names.
-                    </p>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Toast Container -->
         <div id="toastContainer" class="toast-container"></div>
     </div>
+    <footer class="container1"
+        style="background-color: rgb(254, 107, 2); height: 100px; color: white; display: flex; text-align: center; justify-content: center; align-items: center;">
+        <div>
+
+            <div>&copy;2025, all rights reserved | Design By : Prashant Golhar  | Guided by : Shivdas Itankar <br>Contact US : 8308797973 || prashantgolhar7@gmail.com || shiv.das9716@gmail.com </div>
+            
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
